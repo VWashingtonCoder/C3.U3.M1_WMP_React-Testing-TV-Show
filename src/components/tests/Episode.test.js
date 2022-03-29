@@ -43,5 +43,5 @@ test("renders default image when image is not defined", async () => {
     render(<Episode episode={testDataNullImg}/>)
     const defaultImg = screen.getByAltText(/stranger-things.png/, { exact: false })
     expect(defaultImg).toBeVisible()
-});
+}); // Complete
 
