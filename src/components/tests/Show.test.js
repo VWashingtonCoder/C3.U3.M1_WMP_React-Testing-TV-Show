@@ -23,7 +23,8 @@ test('renders without errors', async () => {
 
 test('renders Loading component when prop show is null', async () => { 
     render(<Show show={null} />)
-    await screen.findByText("Fetching data", {exact: false})
+    const loadingScreen = await screen.findByText("Fetching data", {exact: false})
+    expect(loadingScreen).toBeVisible
  }); // Complete
 
 test('renders same number of options seasons are passed in', () => { 
